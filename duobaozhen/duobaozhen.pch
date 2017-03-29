@@ -1,0 +1,201 @@
+//
+//  PrefixHeader.pch
+//  duobaozhen
+//
+//  Created by 肖旋 on 16/5/25.
+//  Copyright (c) 2016年 xiaoxuan. All rights reserved.
+//
+
+#ifndef duobaozhen_PrefixHeader_pch
+#define duobaozhen_PrefixHeader_pch
+
+//DEBUG 模式下打印日志,当前行
+#ifdef DEBUG
+# define DLog(fmt, ...) NSLog((@"%s [Line %d] ", fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+# define DLog(...)
+#endif
+
+//重写NSLog,Debug模式下打印日志和当前行数
+#if DEBUG
+#define NSLog(FORMAT, ...) fprintf(stderr,"\nfunction:%s line:%d content:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(FORMAT, ...) nil
+#endif
+
+//DEBUG 模式下打印日志,当前行 并弹出一个警告
+#ifdef DEBUG
+# define ULog(fmt, ...) { UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%s\n [Line %d] ", __PRETTY_FUNCTION__, __LINE__] message:[NSString stringWithFormat:fmt, ##__VA_ARGS__] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil]; [alert show]; }
+#else
+# define ULog(...)
+#endif
+
+#define WIDTH [UIScreen mainScreen].bounds.size.width
+#define HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#define BASE_COLOR [UIColor colorWithRed:215/255.0 green:21/255.0 blue:66/255.0 alpha:1.0]
+
+//#define BASE_URL @"http://ggdb.jbserver.cn"
+
+#define BASE_URL @"http://101.200.146.62:81"
+
+
+#define SCREEN_WIDTH (CGRectGetWidth([UIScreen mainScreen].bounds) / 750.0 )
+#define SCREEN_HEIGHT (CGRectGetHeight([UIScreen mainScreen].bounds) / 1334.0 )
+#define SCREEN_W [UIScreen mainScreen].bounds.size.width
+#define SCREEN_H [UIScreen mainScreen].bounds.size.height
+#ifndef kScreenBounds
+#define kScreenBounds [UIScreen mainScreen].bounds
+#endif
+
+#ifndef kDefaultColor
+#define kDefaultColor [UIColor colorWithHexString:@"D02346"]
+#endif
+
+#ifndef kNavigationBarHeight
+#define kNavigationBarHeight 64.0
+#endif
+
+#ifndef kTabBarHeight
+#define kTabBarHeight 49.0
+#endif
+
+#ifndef SYSTEM_FONT
+#define SYSTEM_FONT(__fontsize__)\
+[UIFont systemFontOfSize:__fontsize__]
+#endif
+
+#ifndef IMAGE_NAMED
+#define IMAGE_NAMED(__imageName__)\
+[UIImage imageNamed:__imageName__]
+#endif
+
+#ifndef NIB_NAMED
+#define NIB_NAMED(__nibName__)\
+[UINib nibWithNibName:__nibName__ bundle:nil]
+#endif
+
+#ifndef kTreasureIsLogined
+#define kTreasureIsLogined @"kTreasureIsLogined"
+#endif
+
+#ifndef UIColorHex
+#define UIColorHex(_hex_)   [UIColor colorWithHexString:((__bridge NSString *)CFSTR(#_hex_))]
+#endif
+
+#define UIColorFromRGB(rgbValue) \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.0f green:((float)((rgbValue & 0xFF00) >> 8)) / 255.0f blue:((float)(rgbValue & 0xFF)) / 255.0f alpha:1.0f]
+
+#define UIColorWithRGB(r,g,b) \
+[UIColor colorWithRed:r / 255.0f green:g / 255.0f blue:b / 255.0f alpha:1.0f]
+
+#define UIColorWithRGBA(r,g,b,a) \
+[UIColor colorWithRed:r / 255.0f green:g / 255.0f blue:b / 255.0f alpha:a]
+
+#define UICOLOR_HEX(hexColor) \
+[UIColor colorWithRed: (((hexColor >> 16) & 0xFF)) / 255.0f green: (((hexColor >> 8) & 0xFF)) / 255.0f blue: ((hexColor & 0xFF)) / 255.0f alpha:1.0f]
+
+#define UIBLACK \
+UICOLOR_HEX(0x000000)
+
+#define UIGRAY \
+UICOLOR_HEX(0xa6a6a6)
+
+#define UIBLUE \
+UICOLOR_HEX(0x00a0e9)
+
+#define UIGREEN \
+UICOLOR_HEX(0x8fc31f)
+
+#define UICYAN \
+UICOLOR_HEX(0x00a0e9)
+
+#define UIRED \
+UICOLOR_HEX(0xea4b35)
+
+#define UIPINK \
+UICOLOR_HEX(0xff5d5d)
+
+#define UITABLE_LINE \
+UICOLOR_HEX(0xf0f1f6)
+
+#define UIWHITE \
+[UIColor whiteColor]
+
+#define UICLEAR \
+[UIColor clearColor]
+
+#define UIORANGE_NORMAL \
+UIColorWithRGB(243, 151, 2)
+
+#define UIORANGE_SELECTED \
+UIColorWithRGB(238, 132, 10)
+
+#define UIRED_NORMAL \
+UIColorWithRGB(255, 107, 107)
+
+#define UIRED_HIGHLIGHTED \
+UIColorWithRGB(229, 97, 97)
+
+#define UIBLUE_NORMAL \
+UIColorWithRGB(25, 176, 249)
+
+#define UIBLUE_HIGHLIGHTED \
+UIColorWithRGB(19, 141, 199)
+#define PI 3.1415926
+
+#define UIFONT(font) \
+[UIFont fontWithName:@"MicrosoftYaHei" size:font]
+
+
+// main screen's scale
+#ifndef kScreenScale
+#define kScreenScale YYScreenScale()
+#endif
+
+// main screen's size (portrait)
+#ifndef kScreenSize
+#define kScreenSize YYScreenSize()
+#endif
+
+// main screen's width (portrait)
+#ifndef kScreenWidth
+#define kScreenWidth YYScreenSize().width
+#endif
+
+// main screen's height (portrait)
+#ifndef kScreenHeight
+#define kScreenHeight YYScreenSize().height
+#endif
+
+
+
+
+#import "XXTool.h"
+#import "RCHttpRequest.h"
+#import "AFNetworking.h"
+#import "YYKit.h"
+#import "HttpCenter.h"
+#import "UIImageView+WebCache.h"
+#import "IQKeyboardManager.h"
+#import "IQKeyboardReturnKeyHandler.h"
+#import "UIViewController+Base.h"
+#import "UMMobClick/MobClick.h"
+#define MFont(f) [UIFont systemFontOfSize:f]
+#define kIphone6Height 667.0
+
+#define kIphone6Width 375.0
+#define YouLikeLineCount 2
+#define YouLikeCellW ((SScreen_Width - YouLikeInset * (YouLikeLineCount - 1)) / YouLikeLineCount) * 1.0
+#define YouLikeInset kFit(6)
+#define YouLikeCellH kFit((250 - YouLikeInset))
+#define SScreen_Width [UIScreen mainScreen].bounds.size.width
+#define SScreen_Height [UIScreen mainScreen].bounds.size.height
+#define kFit(x) (SScreen_Width*((x)/kIphone6Width))
+#define MColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0f]
+
+#define TextSize kFit(16)
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditNameViewController">
+            <connections>
+                <outlet property="nameTF" destination="mYV-Ah-Gyi" id="lc2-8a-3IX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view1" destination="qWp-Cs-wbV" id="zXd-SE-xcc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWp-Cs-wbV">
+                    <rect key="frame" x="17" y="37" width="286" height="40"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mYV-Ah-Gyi">
+                            <rect key="frame" x="5" y="0.0" width="281" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="0KU-6Q-BYJ"/>
+                        <constraint firstItem="mYV-Ah-Gyi" firstAttribute="leading" secondItem="qWp-Cs-wbV" secondAttribute="leading" constant="5" id="3ph-zC-ANi"/>
+                        <constraint firstAttribute="bottom" secondItem="mYV-Ah-Gyi" secondAttribute="bottom" id="9cj-wL-7q6"/>
+                        <constraint firstAttribute="trailing" secondItem="mYV-Ah-Gyi" secondAttribute="trailing" id="h5S-9B-xTt"/>
+                        <constraint firstItem="mYV-Ah-Gyi" firstAttribute="top" secondItem="qWp-Cs-wbV" secondAttribute="top" id="whd-qP-pV6"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="qWp-Cs-wbV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="17" id="3RN-3p-rMA"/>
+                <constraint firstItem="qWp-Cs-wbV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="37" id="5ed-34-Pqd"/>
+                <constraint firstItem="qWp-Cs-wbV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="M6m-3J-6aj"/>
+                <constraint firstAttribute="trailing" secondItem="qWp-Cs-wbV" secondAttribute="trailing" constant="17" id="qLE-Js-rDv"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="395" y="203"/>
+        </view>
+    </objects>
+</document>

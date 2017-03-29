@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XXFindViewController">
+            <connections>
+                <outlet property="tableView" destination="Wqv-EZ-FE2" id="vmD-GM-6sO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wqv-EZ-FE2">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="3hf-Ej-eVL"/>
+                        <outlet property="delegate" destination="-1" id="7gc-HM-e8V"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Wqv-EZ-FE2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7Wp-bV-WUv"/>
+                <constraint firstItem="Wqv-EZ-FE2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JpD-PC-EEx"/>
+                <constraint firstAttribute="trailing" secondItem="Wqv-EZ-FE2" secondAttribute="trailing" id="RUk-1f-xiJ"/>
+                <constraint firstAttribute="bottom" secondItem="Wqv-EZ-FE2" secondAttribute="bottom" id="zVx-oS-Tcf"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="294" y="230"/>
+        </view>
+    </objects>
+</document>

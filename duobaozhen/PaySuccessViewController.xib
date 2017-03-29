@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaySuccessViewController">
+            <connections>
+                <outlet property="btn" destination="T9M-pO-kN6" id="Ecs-Dp-HAe"/>
+                <outlet property="lab" destination="z6g-gJ-BP0" id="8dN-2f-VrL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pay_success.png" translatesAutoresizingMaskIntoConstraints="NO" id="MFy-Yp-OrJ">
+                    <rect key="frame" x="147" y="40" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="6P3-I7-8S2"/>
+                        <constraint firstAttribute="height" constant="80" id="Gb1-oD-x5d"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成功参与夺宝, 请耐心等待开奖。获奖后会有专门的短信通知您。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6g-gJ-BP0">
+                    <rect key="frame" x="30" y="135" width="314" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="51" id="vfJ-fS-3uy"/>
+                        <constraint firstAttribute="width" constant="314" id="yGH-MK-lvc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9M-pO-kN6">
+                    <rect key="frame" x="23" y="206" width="328" height="40"/>
+                    <color key="backgroundColor" red="0.85098039215686272" green="0.19215686274509802" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="s0M-B2-dDc"/>
+                    </constraints>
+                    <state key="normal" title="继续夺宝">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="duobao:" destination="-1" eventType="touchUpInside" id="2fz-HY-Rl0"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="z6g-gJ-BP0" firstAttribute="top" secondItem="MFy-Yp-OrJ" secondAttribute="bottom" constant="15" id="2TA-vK-FCy"/>
+                <constraint firstItem="MFy-Yp-OrJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="3eT-hI-9h9"/>
+                <constraint firstItem="MFy-Yp-OrJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Nrp-D0-bdQ"/>
+                <constraint firstItem="z6g-gJ-BP0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Wmn-p9-5PZ"/>
+                <constraint firstItem="T9M-pO-kN6" firstAttribute="top" secondItem="z6g-gJ-BP0" secondAttribute="bottom" constant="20" id="Zb8-lR-LTx"/>
+                <constraint firstItem="T9M-pO-kN6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="23" id="m8n-8W-wOS"/>
+                <constraint firstAttribute="trailing" secondItem="T9M-pO-kN6" secondAttribute="trailing" constant="24" id="prG-lE-abN"/>
+                <constraint firstItem="T9M-pO-kN6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ymd-tg-F4Q"/>
+            </constraints>
+            <point key="canvasLocation" x="52.5" y="91.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pay_success.png" width="800" height="800"/>
+    </resources>
+</document>

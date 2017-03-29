@@ -1,0 +1,6 @@
+framework module TTCounterLabel {
+  umbrella header "TTCounterLabel-umbrella.h"
+
+  export *
+  module * { export * }
+}

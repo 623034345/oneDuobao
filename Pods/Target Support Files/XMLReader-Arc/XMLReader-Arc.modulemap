@@ -1,0 +1,6 @@
+framework module XMLReader_Arc {
+  umbrella header "XMLReader-Arc-umbrella.h"
+
+  export *
+  module * { export * }
+}
